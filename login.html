@@ -36,7 +36,7 @@
           <input type="email" name="email" placeholder="Email" required />
          <label for="password">Password:</label>
           <input type="password" name="password" placeholder="Password"  required />
-          <button type="submit" onclick="goToNewPage()">Login</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     </section>
@@ -47,9 +47,13 @@
       </div>
     </footer>
     <script>
-      function goToNewPage() {
-        window.location = "showcase.html";
-      }
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+        if (document.querySelector('input[name="email"]').checkValidity() && 
+            document.querySelector('input[name="password"]').checkValidity()) {
+          window.location.href = "showcase.html"; // Navigate to showcase.html
+        }
+      });
     </script>
   </body>
 </html>
