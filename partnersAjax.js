@@ -4,6 +4,7 @@ $(document).ready(function() {
         method: 'GET',
         dataType: 'json',
         success: function(data) {
+            console.log(data);
             let partnershipsHtml = '<h2>Our Partnerships</h2>';
             data.forEach(partner => {
                 partnershipsHtml += `<div><h3>${partner.name}</h3><p>${partner.description}</p></div>`;
