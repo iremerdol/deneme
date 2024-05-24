@@ -1,14 +1,14 @@
 $(document).ready(function() {
     $.ajax({
-        url: 'aboutus.json',
+        url: 'partnerships.json',
         method: 'GET',
         dataType: 'json',
         success: function(data) {
-            let partnershipsHtml = '<h2>Irem && Eda</h2>';
+            let partnershipsHtml = '<h2>Our Partnerships</h2>';
             data.forEach(partner => {
-                partnershipsHtml += `<div><p>${partner.description}</p></div>`;
+                partnershipsHtml += `<div><h3>${partner.name}</h3><p>${partner.description}</p></div>`;
             });
-            $('#italic').html(partnershipsHtml);
+            $('#partnerships').html(partnershipsHtml);
         },
         error: function(error) {
             console.error('Error fetching partnerships:', error);
