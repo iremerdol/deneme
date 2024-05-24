@@ -9,7 +9,7 @@ $(document).ready(function() {
             data.forEach(partner => {
                 partnershipsHtml += `<div><h3>${partner.name}</h3><p>${partner.description}</p></div>`;
             });
-            $('#partnership').html(partnershipsHtml);
+            $('#partnerships').html(partnershipsHtml);
         },
         error: function(error) {
             console.error('Error fetching partnerships:', error);
