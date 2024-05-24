@@ -37,7 +37,7 @@
                 <input type="email" name="email" placeholder="Email" required>
                 <label for="password">Password:</label>
                 <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Sign Up</button>
+                <button type="submit" onclick="goToNewPage()">Sign Up</button>
             </form>
         </div>
     </section>
@@ -47,5 +47,11 @@
             <p>&copy; 2024 CV Temple. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        function goToNewPage()
+        {
+            window.location = "showcase.html";
+        }
+    </script>
 </body>
 </html>
