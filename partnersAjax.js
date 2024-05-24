@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-        url: 'partnerships.json',
+        url: 'https://my-json-server.typicode.com/iremerdol/webdata/partners',
         method: 'GET',
         dataType: 'json',
         success: function(data) {
@@ -8,7 +8,7 @@ $(document).ready(function() {
             data.forEach(partner => {
                 partnershipsHtml += `<div><h3>${partner.name}</h3><p>${partner.description}</p></div>`;
             });
-            $('#partnerships').html(partnershipsHtml);
+            $('#partnership').html(partnershipsHtml);
         },
         error: function(error) {
             console.error('Error fetching partnerships:', error);
